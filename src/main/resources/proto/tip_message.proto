@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+
+package com.example.kafka.producer.type;
+
+option java_multiple_files = true;
+option java_outer_classname = "TipProto";
+option java_package = "com.example.kafka.producer.type";
+
+message TipMessage {
+  TipFirst first = 1;
+  TipSecond second = 2;
+}
+
+message TipFirst {
+  string message = 1;
+  string value = 2;
+}
+
+message TipSecond {
+  repeated string wivesName = 1;
+  string id = 2;
+}
